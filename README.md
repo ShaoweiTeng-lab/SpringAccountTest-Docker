@@ -24,6 +24,15 @@ docker-compose up -d
 ![image](https://github.com/ShaoweiTeng-lab/SpringAccountTest-Docker/assets/50354880/62a6820a-1a87-4d55-bc9e-e85ab0578f6e)
 
 
+## MySql Table:
+![image](https://github.com/ShaoweiTeng-lab/SpringAccountTest/assets/50354880/984446bc-7888-4008-acb3-ceb2ea724618)
+## 使用技術:
+### * Spring boot 2.7.13
+### * Spring boot Starter Security 2.7.13
+### * mysql 8.0.33
+### * Redis
+### * Swagger (knife4j)
+
 
 
 ### 測試方式:
