@@ -12,9 +12,14 @@
 
 
 *  <h3> 使用docker-compose build --no-cache 製作Docker Image </h3> 
+```
+docker-compose build --no-cache
+```
 <img width="822" alt="image" src="https://github.com/ShaoweiTeng-lab/SpringAccountTest-Docker/assets/50354880/536f7ef5-6ab3-49d3-9057-d9df08057674">
 
 *  <h3> 使用docker-compose up -d 運行  </h3> 
-
+```
+docker-compose up -d
+```
 ![image](https://github.com/ShaoweiTeng-lab/SpringAccountTest-Docker/assets/50354880/62a6820a-1a87-4d55-bc9e-e85ab0578f6e)
 
