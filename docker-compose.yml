@@ -1,0 +1,41 @@
+version: '3.7'
+services:
+  mysql-db:
+    container_name: 'spring-account-mysql-db'
+    build:
+      context: ./db
+    image: 55123/spring-account-mysql-db
+    ports:
+      - '3307:3306'
+    command: --lower_case_table_names=1 
+    networks:
+      server-bridge:
+        ipv4_address: 172.20.0.7
+  redis-db:
+    container_name: 'redis-db'
+    image: 'redis:latest'
+    ports:
+      - '6371:6379' 
+    networks:
+      server-bridge:
+        ipv4_address: 172.20.0.2
+
+  web-server:
+    container_name: 'spring-account-java-server'
+    build:
+      context: ./backEnd
+    image: 55123/spring-account-java-server
+    ports:
+      - '8080:8080'  # 将容器的8080端口映射到主机的8081端口
+    networks:
+      server-bridge:
+        ipv4_address: 172.20.0.3
+    command: >
+      sh -c "./wait-for-it.sh mysql-db:3306 && ./wait-for-it.sh redis-db:6379 && java -jar backend.jar" 
+networks:
+  server-bridge:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet: 172.20.0.0/16
