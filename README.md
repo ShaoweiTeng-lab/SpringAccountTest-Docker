@@ -1,7 +1,6 @@
 # SpringAccountTest-Docker
 
-## 專題說明:
-<H2>奧爾資訊 面試前測驗</H2>
+
 
 ## 安裝方式:
 *  <h3> 將此專題 clone  </h3> 
